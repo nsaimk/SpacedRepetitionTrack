@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spaced Repetition Tracker</title>
+</head>
+
+<body>
+    <main>
+        <h1>Spaced Repetition Tracker</h1>
+
+        <section>
+            <label for="user-select">Choose a User:</label>
+            <select id="user-select">
+                <option value="" disabled selected>-- Select a User --</option>
+                <option value="user1">User 1</option>
+                <option value="user2">User 2</option>
+                <option value="user3">User 3</option>
+                <option value="user4">User 4</option>
+                <option value="user5">User 5</option>
+            </select>
+        </section>
+
+        <hr />
+
+        <section>
+            <h2>Add Revision Topic</h2>
+            <form id="topic-form">
+                <div>
+                    <label for="topic-name">Topic Name:</label>
+                    <input type="text" id="topic-name" required>
+                </div>
+
+                <div>
+                    <label for="revision-start-date">Start Date:</label>
+                    <input type="date" id="revision-start-date" required>
+                </div>
+
+                <button type="submit">Calculate & Add Agenda</button>
+            </form>
+        </section>
+
+        <hr />
+
+        <section aria-live="polite">
+            <h2>Revision Agenda</h2>
+            <div id="agenda-container">
+                <p>Please select a user to view their agenda.</p>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>
